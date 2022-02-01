@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^terrapixel\.me [NC,OR]
+RewriteCond %{HTTP_HOST} ^www\.terrapixel\.me [NC]
+RewriteRule ^(.*)$ https://www.terapixel.me/$1 [R,L]
+
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+<FilesMatch "(\.un~|~)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
